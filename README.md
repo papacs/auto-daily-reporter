@@ -46,7 +46,7 @@
 * **🔌 易于扩展**：基于 `.env` 配置，支持 DeepSeek、OpenAI 等多种 LLM 模型。
 
 ## 🖼️ 效果演示
-![alt text](image.png)
+![alt text](image-1.png)
 ### 1. 终端交互 (CLI)
 AI 自动分析了我的提交记录，并生成了结构化的日报。注意，它停下来等待我的确认：
 
