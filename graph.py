@@ -41,6 +41,24 @@ def fetch_logs(state: DailyReportState):
     
     return {"raw_logs": logs}
 
+
+# graph.py (修改版思路)
+# from langchain_mcp_adapters.tools import load_mcp_tools # 这是一个假设的适配库，目前社区正在完善中
+
+# async def fetch_logs(state: DailyReportState):
+#     print("🤖 正在通过 MCP 协议连接工具服务...")
+    
+#     # 以前是：logs = fetch_github_commits(...)
+#     # 现在是：通过 stdio 协议远程调用
+#     # 这意味着你的 Agent 甚至可以运行在另一台电脑上，只要能连上这个进程
+    
+#     # 模拟 MCP Client 调用过程
+#     # client.call_tool("get_daily_commits", arguments={...})
+    
+#     # (为了不破坏你现在的现有代码，我们先保持 MVP 状态，
+#     # 但你应该明白，MCP 的意义在于把 fetch_github_commits 变成了一个独立的微服务)
+#     pass
+
 def draft_report(state: DailyReportState):
     """步骤2：AI 写日报"""
     print("🤖 正在绞尽脑汁润色日报...")

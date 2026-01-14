@@ -139,7 +139,3 @@ python main.py
 <div align="center">
 Made with ❤️ by a lazy programmer
 </div>
-
-```
-
-```
