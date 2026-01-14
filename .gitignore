@@ -1,0 +1,12 @@
+target/
+*.iml
+.idea/
+.project
+.classpath
+.settings
+.DS_Store
+logs/
+*.log
+*.pyc
+.env
+__pycache__/
