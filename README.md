@@ -1,3 +1,4 @@
+```markdown
 # 🚀 Auto Daily Reporter | 懒人日报神器
 
 <div align="center">
@@ -50,8 +51,6 @@
 ### 1. 终端交互 (CLI)
 AI 自动分析了我的提交记录，并生成了结构化的日报。注意，它停下来等待我的确认：
 
-*(建议此处放你刚才那张终端生成日报的截图)*
-
 ### 2. 润色对比
 | 原始 Commit | Auto Daily Reporter 生成 |
 | :--- | :--- |
@@ -75,25 +74,35 @@ graph LR
     end
     Fetch -->|调用| GitHub_API
     Draft -->|调用| DeepSeek/OpenAI
+
 ```
 
 ---
-🚀 快速开始
-1. 克隆项目
-Bash
 
+## 🚀 快速开始
+
+### 1. 克隆项目
+
+```bash
 git clone [https://github.com/papacs/auto-daily-reporter.git](https://github.com/papacs/auto-daily-reporter.git)
 cd auto-daily-reporter
-2. 安装依赖
-Bash
 
-# 推荐使用 python 3.10+
+```
+
+### 2. 安装依赖
+
+> 推荐使用 python 3.10+
+
+```bash
 pip install -r requirements.txt
-3. 配置环境变量
-复制 .env.example 为 .env，并填入你的配置：
 
-Ini, TOML
+```
 
+### 3. 配置环境变量
+
+复制 `.env.example` 为 `.env`，并填入你的配置：
+
+```ini
 # GitHub 配置
 GITHUB_TOKEN=你的ghp_token
 GITHUB_USER=你的用户名 (例如 papacs)
@@ -102,20 +111,36 @@ GITHUB_REPO=你的仓库名 (例如 conClean)
 # AI 模型配置 (支持 DeepSeek/OpenAI)
 OPENAI_API_KEY=sk-xxxxxx
 OPENAI_API_BASE=[https://api.deepseek.com/v1](https://api.deepseek.com/v1)
-4. 运行
-Bash
 
+```
+
+### 4. 运行
+
+```bash
 python main.py
-🗓️ Roadmap
-[x] 本地 CLI 版本 (已完成)
 
-[x] GitHub 提交记录自动抓取
+```
 
-[x] LangGraph 人机交互流程
+---
 
-[ ] v1.5: 集成 PushPlus/Server酱，推送到微信
+## 🗓️ Roadmap
 
-[ ] v2.0: 部署至 GitHub Actions，实现全自动定时触发
+* [x] 本地 CLI 版本 (已完成)
+* [x] GitHub 提交记录自动抓取
+* [x] LangGraph 人机交互流程
+* [ ] **v1.5**: 集成 PushPlus/Server酱，推送到微信
+* [ ] **v2.0**: 部署至 GitHub Actions，实现全自动定时触发
 
-🤝 贡献
-如果你也对 LangGraph 感兴趣，或者有更好的 Prompt 技巧，欢迎提交 Issue 或 PR！让我们一起把“懒”发挥到极致。   
+## 🤝 贡献
+
+如果你也对 LangGraph 感兴趣，或者有更好的 Prompt 技巧，欢迎提交 Issue 或 PR！让我们一起把“懒”发挥到极致。
+
+---
+
+<div align="center">
+Made with ❤️ by a lazy programmer
+</div>
+
+```
+
+```
