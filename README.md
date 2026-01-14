@@ -83,7 +83,7 @@ graph LR
 ### 1. 克隆项目
 
 ```bash
-git clone [https://github.com/papacs/auto-daily-reporter.git](https://github.com/papacs/auto-daily-reporter.git)
+git clone https://github.com/papacs/auto-daily-reporter.git
 cd auto-daily-reporter
 
 ```
@@ -109,7 +109,7 @@ GITHUB_REPO=你的仓库名 (例如 conClean)
 
 # AI 模型配置 (支持 DeepSeek/OpenAI)
 OPENAI_API_KEY=sk-xxxxxx
-OPENAI_API_BASE=[https://api.deepseek.com/v1](https://api.deepseek.com/v1)
+OPENAI_API_BASE=https://api.deepseek.com/v1
 
 ```
 
