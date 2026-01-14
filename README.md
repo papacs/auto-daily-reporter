@@ -1,4 +1,3 @@
-```markdown
 # 🚀 Auto Daily Reporter | 懒人日报神器
 
 <div align="center">
