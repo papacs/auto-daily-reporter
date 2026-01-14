@@ -75,11 +75,9 @@ graph LR
     end
     Fetch -->|调用| GitHub_API
     Draft -->|调用| DeepSeek/OpenAI
+```
 
-
-
-
-
+---
 🚀 快速开始
 1. 克隆项目
 Bash
@@ -120,4 +118,4 @@ python main.py
 [ ] v2.0: 部署至 GitHub Actions，实现全自动定时触发
 
 🤝 贡献
-如果你也对 LangGraph 感兴趣，或者有更好的 Prompt 技巧，欢迎提交 Issue 或 PR！让我们一起把“懒”发挥到极致。    
+如果你也对 LangGraph 感兴趣，或者有更好的 Prompt 技巧，欢迎提交 Issue 或 PR！让我们一起把“懒”发挥到极致。   
