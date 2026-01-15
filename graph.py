@@ -33,11 +33,20 @@ def fetch_logs(state: DailyReportState):
     # ✅ 从环境变量获取 Token (关键点！)
     token = os.getenv("GITHUB_TOKEN")
     sha = os.getenv("GITHUB_SHA")
+    branch_filter = os.getenv("GITHUB_BRANCH_FILTER")
+    target_date = os.getenv("GITHUB_DATE")
     if not token:
         return {"raw_logs": "❌ 错误：未找到 GITHUB_TOKEN，请检查 .env 文件"}
 
     # 调用工具
-    logs = fetch_github_commits(username, repo, sha, token)
+    logs = fetch_github_commits(
+        username,
+        repo,
+        sha,
+        token,
+        branch_filter=branch_filter,
+        date_str=target_date,
+    )
     
     return {"raw_logs": logs}
 
@@ -82,6 +91,7 @@ def draft_report(state: DailyReportState):
     prompt = f"""
     你是一个职场老手，请把下面的代码提交记录润色成一份专业的日报。
     风格要求：简洁、专业、体现价值。
+    如果提交记录来自多个仓库，请在每条小标题前加上仓库名称，便于区分。
     
     提交记录：
     {state['raw_logs']}

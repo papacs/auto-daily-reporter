@@ -105,7 +105,9 @@ pip install -r requirements.txt
 # GitHub 配置
 GITHUB_TOKEN=你的ghp_token
 GITHUB_USER=你的用户名 (例如 papacs)
-GITHUB_REPO=你的仓库名 (例如 conClean)
+GITHUB_REPO=你的仓库名，支持多个仓库用逗号分隔 (例如 conClean,another-repo)
+GITHUB_BRANCH_FILTER=可选，分支模糊过滤关键词，逗号分隔 (例如 dev,release,hotfix)
+GITHUB_DATE=可选，指定日期 (yyyy-mm-dd)，为空默认当天
 
 # AI 模型配置 (支持 DeepSeek/OpenAI)
 OPENAI_API_KEY=sk-xxxxxx
@@ -119,6 +121,8 @@ OPENAI_API_BASE=https://api.deepseek.com/v1
 python main.py
 
 ```
+
+> 说明：不设置 `GITHUB_SHA` 时会自动扫描每个仓库的全部分支来抓取提交记录；如需缩小范围，可使用 `GITHUB_BRANCH_FILTER` 进行模糊过滤（大小写不敏感）。`GITHUB_DATE` 可指定要拉取的日期，未设置时默认当天。
 
 ---
 
